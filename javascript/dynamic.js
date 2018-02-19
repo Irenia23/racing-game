@@ -11,17 +11,30 @@ userBlue = document.querySelector('.js-user-blue');
 btnAccept = document.querySelector('.js-btn-accept');
 
 
+function enableUsers(){
+  userRed.disabled = false;
+  userBlue.disabled = false;
+  btnAccept.style.backgroundColor = "#BD3131";
+  btnAccept.disabled = false;
+  btnAccept.focus();
+  btnAccept.style.borderColor = "#910808"
+}
+
+function disableUsers(){
+  userRed.disabled = true;
+  userBlue.disabled = true;
+  btnAccept.style.backgroundColor = "#454444";
+  btnAccept.style.borderColor = "#454444";
+  btnAccept.disabled = true;
+  btnRestart.focus();
+}
+
 btnAccept.addEventListener('click', function(){
     if ((userRed.value == "") || (userBlue.value == "")) {
       alert("Es obligatorio llenar todos los campos");
     }
     else{
-      userRed.disabled = true;
-      userBlue.disabled = true;
-      btnAccept.style.backgroundColor = "#454444";
-      btnAccept.style.borderColor = "#454444";
-      btnAccept.disabled = true;
-      btnRestart.focus();
+      disableUsers();
     } 
 });
 
@@ -74,10 +87,5 @@ btnRestart.addEventListener('click', function(){
   document.getElementById("js-message").classList.remove("tada");
   messageWinner.style.bottom = "75%";
   messageWinner.innerHTML = "";
-  userRed.disabled = false;
-  userBlue.disabled = false;
-  btnAccept.style.backgroundColor = "#BD3131";
-  btnAccept.disabled = false;
-  btnAccept.focus();
-  btnAccept.style.borderColor = "#910808"
+  enableUsers();
 });
