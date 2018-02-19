@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Racing Game</title>
+  <meta charset="utf-8">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+      
+      <!--ENCABEZADO
+      *************************************************************************************************************** -->
+      <header class="header--wrapper">
+        <div class="wrapper header">
+            <svg class="icon icon-flags"><use xlink:href="#icon-flags"></use></svg>
+            <h1 class="header__title">Racing Game</h1>
+        </div>
+      </header>
+
+      <!--SECCIÓN DE JUEGO
+      *************************************************************************************************************** -->
+      <div class="wrapper section-game">
+          <p class="font-style">Disfruta de este juego con tus amigos y prueben a ver quién llega primero! </br> La letra "a" corresponde al carro Rojo y la letra "l" corresponde al carro Azul.</p>
+
+          <div class="section-game__users">
+            <fieldset class="section-game__fielset">
+              <legend class="section-game__legend">Nombres de los jugadores</legend>
+              <label class="section-game__label" for="user-red">Nombre del carro rojo:</label>
+              <input id="user-red" type="text" class="js-user-red section-game__input-user display-block red" placeholder="Nombre del carro rojo">
+              <label class="section-game__label" for="user-blue">Nombre del carro azul:</label>
+              <input id="user-blue" type="text" class="js-user-blue section-game__input-user display-block blue" placeholder="Nombre del carro azul">
+              <button class="section-game__btn-accept js-btn-accept">Aceptar</button>
+            </fieldset>
+          </div>
+
+          <div class="section-game__track">
+              <img src="images/car-r.png" alt="Carro de color rojo" class="js-car-red section-game__car-red">
+              <img src="images/car-b.png" alt="Carro de color azul" class="js-car-blue section-game__car-blue">
+              <p id="js-message" class="js-message-winner section-game__message animated"></p>
+          </div>
+          <button class="js-btn-restart section-game__btn-restart">Restart!</button>
+      </div>
+      
+      <!--PIÉ DE PÁGINA
+      *************************************************************************************************************** -->
+      <footer class="footer--wrapper">
+          <div class="wrapper footer">
+              <p class="footer__description">Copyright © 2018 IRENIA'S GAMES Todos los derechos reservados.</p>
+          </div>
+      </footer>
+      
+      <!--SCRIPTS
+      *************************************************************************************************************** -->
+      <script src="javascript/dynamic.js" charset="utf-8"></script>
+
+      <!-- ELEMENTOS SVG
+      **************************************************************************************************************** -->
+      <div style="display: none">
+          <svg aria-hidden="true" style="overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+            <symbol id="icon-flags" viewBox="0 0 32 32">
+            <title>flags</title>
+            <path d="M31.856 16.453l-7.787-7.787c-0.192-0.192-0.503-0.192-0.695 0l-7.373 7.373-7.373-7.373c-0.192-0.192-0.503-0.192-0.695-0l-7.787 7.787c-0.092 0.092-0.144 0.217-0.144 0.348s0.052 0.255 0.144 0.348l6.186 6.186c0.092 0.092 0.217 0.144 0.348 0.144s0.255-0.052 0.348-0.144l7.439-7.439 0.84 0.84-5.064 5.064c-0.192 0.192-0.192 0.503 0 0.695 0.096 0.096 0.222 0.144 0.348 0.144s0.252-0.048 0.348-0.144l5.064-5.064 5.064 5.064c0.096 0.096 0.222 0.144 0.348 0.144s0.252-0.048 0.348-0.144c0.192-0.192 0.192-0.503 0-0.695l-5.064-5.064 0.84-0.84 7.439 7.439c0.092 0.092 0.217 0.144 0.348 0.144s0.255-0.052 0.348-0.144l6.186-6.186c0.092-0.092 0.144-0.217 0.144-0.348s-0.052-0.255-0.144-0.348zM12.211 16.757l-1.714-1.714-1.961 1.961 1.714 1.714-1.961 1.961-1.714-1.714-1.613 1.613-2.062-2.062 1.613-1.613 2.062 2.062 1.961-1.961-2.062-2.062-1.96 1.96-1.714-1.714 1.961-1.961 1.714 1.714 1.961-1.961-1.714-1.714 1.558-1.558 1.714 1.714-1.558 1.558 2.062 2.062 1.558-1.558 1.714 1.714-1.558 1.558zM29.099 18.515l-2.062 2.062-1.613-1.613-1.714 1.714-1.961-1.961 1.714-1.714-1.961-1.961-1.714 1.714-1.558-1.558 1.714-1.714 1.558 1.558 2.062-2.062-1.558-1.558 1.714-1.714 1.558 1.558-1.714 1.714 1.961 1.961-2.061 2.061 1.961 1.961 2.062-2.062-1.961-1.961 1.714-1.714 1.961 1.961-1.714 1.714 1.613 1.613z"></path>
+            </symbol>
+            </defs>
+          </svg>
+      </div>
+      
+</body>
+</html>
