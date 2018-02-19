@@ -32,14 +32,14 @@ document.addEventListener('keypress', (event) =>{
       var key = key1;
     
     if ((position1 == 1092) && (position1 > position2)) {
-      messageWinner.innerHTML = "¡Felicidades! " + userRed.value + " has ganado.";
+      messageWinner.innerHTML = "¡Felicidades " + userRed.value + " has ganado!";
       messageWinner.style.bottom = "-14%";
       document.getElementById("js-message").classList.add("tada");
       key = "stop";
       btnRestart.focus();
     }
     else if((position2 >= 1092) && (position2 > position1)){
-      messageWinner.innerHTML = "¡Felicidades! " + userBlue.value + " has ganado.";
+      messageWinner.innerHTML = "¡Felicidades " + userBlue.value + " has ganado!";
       messageWinner.style.bottom = "-14%";
       document.getElementById("js-message").classList.add("tada");
       key = "stop";
