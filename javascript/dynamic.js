@@ -1,6 +1,7 @@
 var carRed, carBlue, messageWinner, btnRestart, userRed, userBlue, btnAccept;
 var position1 = 32;
 var position2 = 32;
+var finalPosition = 1092;
 
 carRed = document.querySelector('.js-car-red');
 carBlue = document.querySelector('.js-car-blue');
@@ -44,15 +45,15 @@ document.addEventListener('keypress', (event) =>{
       const key1 = event.key;
       var key = key1;
     
-    if ((position1 == 1092) && (position1 > position2)) {
-      messageWinner.innerHTML = "¡Felicidades " + userRed.value + " has ganado!";
+    if ((position1 == finalPosition) && (position1 > position2)) {
+      messageWinner.innerHTML = "¡Felicidades " + userRed.value + ", has ganado!";
       messageWinner.style.bottom = "-14%";
       document.getElementById("js-message").classList.add("tada");
       key = "stop";
       btnRestart.focus();
     }
-    else if((position2 >= 1092) && (position2 > position1)){
-      messageWinner.innerHTML = "¡Felicidades " + userBlue.value + " has ganado!";
+    else if((position2 >= finalPosition) && (position2 > position1)){
+      messageWinner.innerHTML = "¡Felicidades " + userBlue.value + ", has ganado!";
       messageWinner.style.bottom = "-14%";
       document.getElementById("js-message").classList.add("tada");
       key = "stop";
@@ -61,7 +62,7 @@ document.addEventListener('keypress', (event) =>{
 
     if ((key == "a") || (key == "A"))
     {
-        if (position1 < 1092) {
+        if (position1 < finalPosition) {
             position1 += 10;
             carRed.style.left = position1 + "px";
         }           
@@ -69,7 +70,7 @@ document.addEventListener('keypress', (event) =>{
 
     if ((key == "l") || (key == "L"))
     {
-        if (position2 < 1092) {
+        if (position2 < finalPosition) {
             position2 += 10;
             carBlue.style.left = position2 + "px";
         } 
